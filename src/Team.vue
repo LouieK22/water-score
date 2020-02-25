@@ -15,10 +15,12 @@
 			section
 				h3(class="title is-4") Bottle Tipping (G3)
 				.level
-					button(class="level-item button is-info" v-on:click="bottleTippingPenalty = bottleTippingPenalty + (isViolatingHome ? 20 : 5)") Add Penalty
+					button(class="level-item button is-info" v-on:click="bottleTippingPenalty = bottleTippingPenalty + 20") Add 4X Penalty
+					button(class="level-item button is-info" v-on:click="bottleTippingPenalty = bottleTippingPenalty + 5") Add Penalty
 					.control
 						input(class="input" type="text" v-bind:value="bottleTippingPenalty" readonly)
 					button(class="level-item button is-danger" v-on:click="bottleTippingPenalty = bottleTippingPenalty - 5") Remove Penalty
+					button(class="level-item button is-danger" v-on:click="bottleTippingPenalty = bottleTippingPenalty - 20") Remove 4X Penalty
 			section
 				h3(class="title is-4") Home Violation (G1)
 				.level
@@ -85,7 +87,7 @@ export default Vue.component("team", {
 
 				const multiplier = parseInt(userInput);
 
-				this.totalMultiBottleViolationCounter += this.currentMultiBottleViolationCounter * multiplier;
+				this.totalMultiBottleViolationCounter += (this.currentMultiBottleViolationCounter * multiplier) + 5;
 				this.currentMultiBottleViolationCounter = 0;
 			}
 		}

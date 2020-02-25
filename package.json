@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
 		"build": "rm -r dist/ && parcel build src/index.html",
-		"github": "rm -r docs/ && parcel build src/index.html --out-dir docs/ --public-url ./water-score/"
+		"github": "rm -r docs/ && parcel build src/index.html --out-dir docs/ --public-url ./"
   },
   "keywords": [],
   "author": "",

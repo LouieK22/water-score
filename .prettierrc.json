@@ -1,0 +1,7 @@
+{
+	"trailingComma": "all",
+	"useTabs": true,
+	"tabWidth": 2,
+	"printWidth": 135,
+	"parser": "typescript"
+}
